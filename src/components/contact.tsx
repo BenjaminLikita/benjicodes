@@ -3,13 +3,17 @@ import { toast } from "sonner";
 import { motion } from "motion/react";
 import { TbBrandWhatsapp, TbMail } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { sendEmail } from "../lib/emailjs";
 
-const Contact = () => {
-  type IFormData = {
-    name: string;
-    email: string;
-    message: string;
-  };
+type IFormData = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+
+const Contact = () => {  
+  
 
   const [formData, setFormData] = useState<IFormData>({
     email: "",
@@ -17,12 +21,18 @@ const Contact = () => {
     name: "",
   });
 
+  
+
   const onsubmit = (e: FormEvent<HTMLFormElement>) => {
-    const promise = new Promise((res, rej) => {
-      const rand = Math.round(Math.random());
-      setTimeout(() => (rand === 0 ? rej("") : res("")), 2000);
-    });
     e.preventDefault();
+    
+    const promise = new Promise((resolve, reject) => {
+      sendEmail(formData).then((res) => {
+        resolve(res);
+      }).catch((err) => {
+        reject(err);
+      });
+    })
     toast.promise(promise, {
       loading: "Sending...",
       success: () => {

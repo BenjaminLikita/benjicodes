@@ -1,10 +1,10 @@
-import Navbar from "../components/Navbar";
+import Navbar from "../components/navbar";
 import { MotionConfig } from "motion/react";
-import MyStack from "../components/MyStack";
-import Projects from "../components/Projects";
-import Hero from "../components/Hero";
-import About from "../components/About";
-import Contact from "../components/Contact";
+import MyStack from "../components/myStack";
+import Projects from "../components/projects";
+import Hero from "../components/hero";
+import About from "../components/about";
+import Contact from "../components/contact";
 
 const PortfolioPage = () => {
   return (

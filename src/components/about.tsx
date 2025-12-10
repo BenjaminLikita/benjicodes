@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import Socials from "./Socials";
+import Socials from "./socials";
 
 const About = () => {
   return (
@@ -15,24 +15,24 @@ const About = () => {
           <h1 className="text-3xl font-semibold">Benjamin Likita</h1>
           <div className="space-y-5 text-sm md:text-base">
             <p>
-              I’m a Computer Science student from Nigeria, currently interning
+              I&apos;m a Computer Science student from Nigeria, currently interning
               at Partitie Innovation Hub. As a full-stack developer, I focus on
               building responsive and high-performing applications, leveraging
-              React and Next.js on the frontend. I’m also delving deeper into
+              React and Next.js on the frontend. I&apos;m also delving deeper into
               artificial intelligence, excited by its potential to transform
               industries and create impactful solutions.
             </p>
 
             <p>
               With solid experience in cloud technologies, databases, and
-              programming languages like Python and TypeScript, I’m always eager
+              programming languages like Python and TypeScript, I&apos;m always eager
               to collaborate on projects that drive real-world value. Outside of
               work, I enjoy playing online games, watching anime, and sharpening
               my skills through side projects and learning new technologies.
             </p>
 
             <p>
-              I’m open to connecting and working with like-minded individuals to
+              I&apos;m open to connecting and working with like-minded individuals to
               bring innovative ideas to life!
             </p>
           </div>
