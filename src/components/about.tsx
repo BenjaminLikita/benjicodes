@@ -3,64 +3,83 @@ import Socials from "./socials";
 
 const About = () => {
   return (
-    <section className="bg-black-1 py-20 px-5 space-y-5" id="about">
-      <div className="flex flex-col md:flex-row gap-5">
-        <motion.div
-          viewport={{ once: true, amount: 0.5 }}
-          initial={{ x: -20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[3]"
-        >
-          <span className="text-sm">👋Hey, I'm</span>
-          <h1 className="text-3xl font-semibold">Benjamin Likita</h1>
-          <div className="space-y-5 text-sm md:text-base">
-            <p>
-              I&apos;m a Computer Science student from Nigeria, currently interning
-              at Partitie Innovation Hub. As a full-stack developer, I focus on
-              building responsive and high-performing applications, leveraging
-              React and Next.js on the frontend. I&apos;m also delving deeper into
-              artificial intelligence, excited by its potential to transform
-              industries and create impactful solutions.
-            </p>
+    <section className="bg-bg py-28 md:py-36 px-5 md:px-10 relative" id="about">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[80%] max-w-5xl h-px bg-gradient-to-r from-transparent via-border/30 to-transparent" />
 
-            <p>
-              With solid experience in cloud technologies, databases, and
-              programming languages like Python and TypeScript, I&apos;m always eager
-              to collaborate on projects that drive real-world value. Outside of
-              work, I enjoy playing online games, watching anime, and sharpening
-              my skills through side projects and learning new technologies.
-            </p>
-
-            <p>
-              I&apos;m open to connecting and working with like-minded individuals to
-              bring innovative ideas to life!
-            </p>
-          </div>
-        </motion.div>
+      <div className="max-w-5xl mx-auto space-y-14">
         <motion.div
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.5 }}
-          initial={{ x: 20, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          className="rounded-2xl p-5 bg-black-2 border border-gray-2/10 space-y-3 flex-[2] grid place-items-center relative overflow-hidden"
+          transition={{ duration: 0.6 }}
+          className="space-y-3"
         >
-          {/* doodles start */}
-          <div className="absolute top-[10%] [20px] left-[10%] [850px] size-10 border border-[#513119] before:size-10 before:absolute before:bg-[#303c49] before:top-[30%] before:right-[30%]"></div>
-          <div className="absolute top-[10%] [20px] left-[80%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
-          <div className="absolute top-[45%] [180px] left-[10%] [150px] size-[10px] bg-[#513119]"></div>
-          <div className="absolute top-[70%] [240px] left-[10%] [30px] size-[40px] bg-[#303c49] rounded-full"></div>
-          <div className="absolute top-[50%] [180px] right-[-2%] [150px] size-[50px] bg-[#513119] rotate-[45deg]"></div>
-          <div className="absolute top-[80%] [300px] left-[80%] [30px] size-[40px] border border-[#303c49] rounded-full"></div>
-          <div className="absolute bottom-[2%] left-[40%] [150px] h-[5px] w-[30px] bg-[#513119]"></div>
-          {/* doodles end */}
-          <img
-            src="./profile_pic.jpeg"
-            className="rounded-full w-[50%] border-[4px] border-[#513119] brightness-75"
-            alt="profile_image"
-          />
+          <span className="font-mono text-[10px] font-medium tracking-[5px] uppercase text-text-muted">
+            03 — About
+          </span>
         </motion.div>
+
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16 items-start">
+          {/* Photo */}
+          <motion.div
+            viewport={{ once: true, amount: 0.3 }}
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6 }}
+            className="w-full md:w-auto flex justify-center md:justify-start"
+          >
+            <div className="relative">
+              <div className="absolute inset-0 bg-white/[0.02] blur-[60px] scale-125" />
+              <div className="relative p-[1px] bg-gradient-to-br from-border-light/40 via-transparent to-border-light/20">
+                <img
+                  src="./profile_pic.jpeg"
+                  className="w-40 h-40 md:w-52 md:h-52 object-cover border-[3px] border-bg"
+                  alt="Benjamin Likita"
+                />
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Bio */}
+          <motion.div
+            viewport={{ once: true, amount: 0.3 }}
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="flex-1 space-y-6"
+          >
+            <h2 className="font-display text-3xl md:text-4xl text-text-primary leading-tight">
+              A developer with a passion for
+              <br className="hidden md:block" />
+              <span className="italic text-text-secondary">
+                {" "}building things that matter
+              </span>
+            </h2>
+
+            <div className="space-y-4 text-text-muted text-sm md:text-[15px] leading-[1.7] max-w-2xl">
+              <p>
+                I'm a 400-level Computer Science student at FUTMinna, currently
+                on industrial training. I build full-stack applications with
+                Next.js, Vite, and TanStack Start on the frontend, and Express,
+                NestJS, and Go on the backend.
+              </p>
+              <p>
+                I've been deep into AI engineering — specifically building RAG
+                pipelines and LLM-powered applications. Combined with experience
+                in Cloudflare, Docker, and modern databases, I enjoy shipping
+                products that solve real problems.
+              </p>
+              <p>
+                When I'm not coding, I'm probably gaming, watching anime, or
+                exploring the next thing that catches my curiosity. I'm open to
+                freelance work, collaborations, and full-time roles.
+              </p>
+            </div>
+          </motion.div>
+        </div>
+
+        <Socials />
       </div>
-
-      <Socials />
     </section>
   );
 };

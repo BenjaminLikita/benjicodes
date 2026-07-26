@@ -1,62 +1,97 @@
 import { motion } from "motion/react";
-import { scrollToContact } from "../lib/utils";
+import { scrollTo } from "../lib/utils";
 
 const Hero = () => {
   return (
     <section
-      className="bg-black-1 grid place-items-center pt-36 pb-24 md:py-52 relative overflow-hidden"
+      className="bg-bg min-h-screen grid place-items-center relative overflow-hidden"
       id="home"
     >
-      {/* doodles start */}
-      <div className="absolute top-[60px] left-[1%] [30px] h-[40px] w-[80px] border border-[#131d27] rounded-t-full rotate-[-60deg]"></div>
-      <div className="absolute top-[200px] left-[1%] [20px] size-[80px] bg-[#75797d] rounded-full"></div>
-      <div className="absolute top-[400px] left-[2%] [50px] h-[60px] w-[25px] border border-[#131d27]"></div>
-      <div className="absolute top-[200px] left-[13%] [250px] h-[20px] w-[7px] bg-[#513119]"></div>
-      <div className="absolute top-[290px] left-[12%] [220px] size-[3px] bg-[#75797d] rounded-full"></div>
-      <div className="absolute top-[380px] left-[13%] [250px] h-[4px] w-[50px] bg-[#513119]"></div>
-      <div className="absolute top-[510px] left-[15%] [180px] size-[80px] border border-[#131d27] rounded-full before:absolute before:size-[80px] before:border before:border-[#131d27] before:rounded-full before:bottom-[30%] before:left-[30%]"></div>
-      <div className="absolute top-[550px] left-[32%] [450px] size-[20px] bg-[#303c49]"></div>
-      <div className="absolute top-[550px] left-[45%] [650px] h-[5px] w-[15px] bg-[#513119]"></div>
-      <div className="absolute top-[500px] left-[60%] [850px] size-16 border border-[#303c49] before:size-16 before:absolute before:bg-[#513119] before:top-[30%] before:right-[30%]"></div>
-      <div className="absolute top-[500px] left-[78%] [1050px] size-[20px] border border-[#303c49]"></div>
-      <div className="absolute top-[420px] left-[90%] [1050px] size-[80px] border border-[#303c49]"></div>
-      <div className="absolute top-[380px] left-[83%] [150px] size-[60px] bg-[#513119]"></div>
-      <div className="absolute top-[350px] left-[95%] [20px] size-[30px] bg-[#75797d] rounded-full"></div>
-      <div className="absolute top-[250px] left-[90%] [20px] size-[50px] border border-[#75797d] rounded-full"></div>
-      <div className="absolute top-[200px] left-[83%] [150px] size-[10px] bg-[#513119]"></div>
-      <div className="absolute top-[100px] left-[93%] [30px] h-[40px] w-[80px] bg-[#303c49] rounded-b-full rotate-[-30deg]"></div>
-      {/* doodles end */}
-      <div className="space-y-5 text-center w-[90%] m-auto z-0">
-        <motion.span
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="inline-block rounded-full border border-gray-2 p-2 tracking-[3px] text-[8px] md:text-[10px] font-bold text-gray-2"
+      {/* Cinematic gradient mesh */}
+      <div className="absolute inset-0 vignette">
+        <div className="absolute top-[10%] left-[20%] w-[600px] h-[600px] bg-[#1a1418] rounded-full blur-[180px] opacity-60" />
+        <div className="absolute bottom-[10%] right-[15%] w-[500px] h-[500px] bg-[#141210] rounded-full blur-[150px] opacity-50" />
+        <div className="absolute top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-[#0d1117] rounded-full blur-[200px] opacity-40" />
+      </div>
+
+      {/* Subtle horizontal rule accent */}
+      <div className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-border/20 to-transparent" />
+
+      <div className="relative z-10 w-[90%] max-w-5xl mx-auto text-center space-y-8 md:space-y-10">
+        {/* Role badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
         >
-          FULLSTACK DEVELOPER
-        </motion.span>
+          <span className="inline-block font-mono text-[10px] md:text-[11px] font-medium tracking-[5px] uppercase text-text-muted">
+            Fullstack Developer &bull; AI Engineer
+          </span>
+        </motion.div>
+
+        {/* Main headline */}
         <motion.h1
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="font-bold text-4xl md:text-5xl"
+          initial={{ opacity: 0, y: 25 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          className="font-display font-semibold text-[2.5rem] md:text-6xl lg:text-[5.5rem] text-text-primary leading-[1.08] tracking-tight"
         >
-          Benjamin Likita
+          Building at the intersection
+          <br className="hidden md:block" /> of{" "}
+          <span className="italic text-text-secondary">design</span> and{" "}
+          <span className="italic text-text-secondary">engineering</span>
         </motion.h1>
+
+        {/* Subtext */}
         <motion.p
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="w-[60%] text-center m-auto"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="w-full md:w-[60%] mx-auto text-text-muted text-sm md:text-base leading-relaxed font-light"
         >
-          I transform ideas into digital realities, focusing on creating unique
-          and engaging experiences for users.
+          I'm Benjamin Likita — a full-stack developer and AI engineer building
+          with Next.js, Go, and modern cloud infrastructure. Currently on
+          industrial training, open to opportunities.
         </motion.p>
-        <motion.button
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          className="bg-secondary inline-block md:hidden py-3 px-5 rounded-full font-semibold"
-          onClick={scrollToContact}
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.65 }}
+          className="flex items-center justify-center gap-4"
         >
-          Reach out
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            className="bg-accent text-white py-3 px-7 font-body font-semibold text-sm transition-all duration-300 cursor-pointer"
+            onClick={() => scrollTo("contact")}
+          >
+            Get in touch
+          </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
+            onClick={() => scrollTo("projects")}
+            className="border border-border/60 text-text-secondary hover:text-text-primary py-3 px-7 font-body font-medium text-sm transition-all duration-300 cursor-pointer"
+          >
+            View work
+          </motion.button>
+        </motion.div>
+
+        {/* Scroll indicator */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.4, duration: 1 }}
+          className="hidden md:flex flex-col items-center pt-16"
+        >
+          <motion.div
+            animate={{ y: [0, 6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+            className="w-px h-12 bg-gradient-to-b from-border-light to-transparent"
+          />
+        </motion.div>
       </div>
     </section>
   );
