@@ -1,5 +1,5 @@
-export const scrollToContact = () => {
-  const contactSection = document.getElementById("contact");
+export const scrollTo = (id: string) => {
+  const contactSection = document.getElementById(id);
   contactSection?.scrollIntoView({
     behavior: "smooth",
   });

@@ -9,7 +9,7 @@ import Contact from "../components/contact";
 const PortfolioPage = () => {
   return (
     <main className="text-white">
-      <MotionConfig transition={{ duration: 2, type: "spring", bounce: 0.6 }}>
+      <MotionConfig transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}>
         <Navbar />
         <Hero />
         <MyStack />
