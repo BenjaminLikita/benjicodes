@@ -54,7 +54,7 @@ const Navbar = () => {
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        className={`fixed top-4 left-0 md:left-[45%] -translate-x-1/2 w-full md:w-[92%] md:w-[68%] border py-3 px-6 z-[30] flex justify-between items-center gap-5 transition-all duration-500 ${
+        className={`fixed top-4 left-0 md:left-[45%] -translate-x-1/2 w-full md:w-[68%] border py-3 px-6 z-[30] flex justify-between items-center gap-5 transition-all duration-500 ${
           scrolled
             ? "bg-bg/85 backdrop-blur-xl border-border/40 shadow-xl shadow-black/30"
             : "bg-transparent border-transparent"
