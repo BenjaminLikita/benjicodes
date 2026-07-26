@@ -1,4 +1,4 @@
-import { TbBrandGithub, TbLink } from "react-icons/tb";
+import { TbLink } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { projects } from "../lib/projects";
 import { motion } from "motion/react";
