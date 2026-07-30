@@ -52,7 +52,8 @@ const About = () => {
               A developer with a passion for
               <br className="hidden md:block" />
               <span className="italic text-text-secondary">
-                {" "}building things that matter
+                {" "}
+                building things that matter
               </span>
             </h2>
 
@@ -66,8 +67,8 @@ const About = () => {
               <p>
                 I've been deep into AI engineering — specifically building RAG
                 pipelines and LLM-powered applications. Combined with experience
-                in Cloudflare, Docker, and modern databases, I enjoy shipping
-                products that solve real problems.
+                in Cloudflare, AWS, Docker, and modern databases, I enjoy
+                shipping products that solve real problems.
               </p>
               <p>
                 When I'm not coding, I'm probably gaming, watching anime, or
